@@ -1,16 +1,18 @@
 // Módulos
-const express = require('express');
+const express = require("express");
 const app = express();
 // Acá falta uno... 😇
-
+const routes = require("./routes/mainRouter");
 // Configuración
-app.use(express.static('public'));
+app.use(express.static("public"));
 // Acá falta el template engine
+app.set("views", "./views");
+app.set("view engine", "ejs");
 
 // Rutas
 // Acá falta el archivo de rutas y después las vistas de EJS
-app.get('/', (req, res) => {
-    res.send('Servidor funcionando, el resto te toca a vos 😋')
-});
+app.use("/", routes);
 
-app.listen(3000, () => { console.log('Servidor arriba en el puerto 3000 🤓👌');})
+app.listen(3000, () => {
+  console.log("Servidor arriba en el puerto 3000 🤓👌");
+});
