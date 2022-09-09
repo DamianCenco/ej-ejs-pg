@@ -1,6 +1,7 @@
 // Módulos
 const express = require("express");
 const app = express();
+const puerto = 3500;
 // Acá falta uno... 😇
 const routes = require("./src/routes/mainRouter");
 // Configuración
@@ -13,6 +14,6 @@ app.set("view engine", "ejs");
 // Acá falta el archivo de rutas y después las vistas de EJS
 app.use("/", routes);
 
-app.listen(5000, () => {
-  console.log("Servidor arriba en el puerto 5000 🤓👌");
+app.listen(puerto, () => {
+  console.log(`Servidor arriba en el puerto ${puerto} 🤓👌`);
 });
