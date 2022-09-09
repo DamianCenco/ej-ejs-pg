@@ -6,8 +6,9 @@ const router = express.Router();
 const mainController = require("../controllers/mainController");
 // Acá definimos las rutas
 router.get("/", mainController.showIndex);
-router.get("/detalleMenu", mainController.showMenu);
+router.get("/detalle", mainController.showMenu);
 router.get("/detalle/:id", mainController.showDetalle);
+router.get("/about", mainController.showAbout);
 
 // Acá exportamos el resultado
 module.exports = router;

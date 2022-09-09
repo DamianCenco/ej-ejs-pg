@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <!-- Navbar (sit on top) -->
+    <%- include("../partials/navbar.ejs") %>
+
+
+    <!-- Header -->
+    <%- include("../partials/header.ejs") %>
+    <!-- Page content -->
+    <div class="ps-content">
+
+        <div class="ps-row ps-padding-64" id="about">
+            <div class="ps-col m6 ps-padding-large ps-hide-small">
+              <img
+                src=<%=about.chef%>
+                class="ps-round ps-image ps-opacity-min"
+                alt="Cheff"
+                width="600"
+                height="750"
+              />
+            </div>
+    
+            <div class="ps-col m6 ps-padding-large">
+              <h1 class="ps-center"><%= about.nombre %></h1>
+              <br />
+              <p class="ps-large"><%= parte1 %>
+                <span class="ps-tag ps-light-grey"><%= parte2[0]%></span><%=parte2[1]%>.
+              </p>
+              <p class="ps-large ps-text-grey ps-hide-medium">
+                <%= about.descripcion2 %>
+              </p>
+            </div>
+          </div>
+
+      <!-- Footer -->
+      <%- include("../partials/footer.ejs") %>
+    </div>
+  </body>
+</html>
